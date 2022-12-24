@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<head>
+  <meta charset="utf-8">
+  <title>Merry Christmas!</title>
+</head>
+<style>
+
+  html, body {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    background: #000;
+  }
+  img{
+    display: block;
+    margin: 0 auto;
+  }
+  label{
+
+    display: block;
+    margin: 0 auto;
+    color: pink;
+    font-size: 20px;
+    padding-right: 5px;
+    animation:mymove 2.5s infinite;/* //关联动画名称、动画时长、循环 */
+    /*Safari 和 Chrome:*/
+    -webkit-animation:mymove 2.5s infinite;/* //同上（兼容） */
+  }
+  @keyframes mymove
+  {
+    50% {font-size: 40px;}/* //名字放大大小 */
+  }
+
+  /*Safari 和 Chrome:*/
+  @-webkit-keyframes mymove
+  {
+    50% {font-size: 40px;}/* //名字放大大小 */
+  }
+  .middle{
+    width: 100%;
+    height: 0%;
+    display: flex;align-items: center;
+  }
+  .middle2{
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+
+    display: flex;align-items: center;
+  }
+</style>
+<link rel="stylesheet" href="./style.css">
+</head>
+<script>
+  var shouci=true;
+  console.log(shouci);
+  function getname(){
+    let name = document.getElementById('name')
+    console.log(name);
+  }
+</script>
+
+
+
+</head>
+
+<body>
+<div class="container">
+  <span id="name">洋洋子</span>
+  <span>圣</span>
+  <span>诞</span>
+  <span>节</span>
+  <span>快</span>
+  <span>乐</span>
+</div>
+<body>
+
+<div class="middle">
+  <div class="middle2">
+
+
+    </br>
+
+
+  </div>
+
+  <img src="https://pic.imgdb.cn/item/639132d5b1fccdcd3644fc9a.gif"width="1000" height="600"/>
+</div>
+
+<audio
+        autoplay="autoplay"
+        loop="loop"
+        preload="auto"
+        src="https://sf6-cdn-tos.douyinstatic.com/obj/ies-music/6905357668872063752.mp3">
+</audio>
+<script>
+  console.log(name);
+  var url = document.location.toString(); //获取url地址
+  var urlParmStr = url.slice(url.indexOf('?') + 1); //获取问号后所有的字符串
+  var arr = urlParmStr.split('&'); //通过&符号将字符串分割转成数组
+  var courseId = arr[0].split("=")[1]; //获取数组中第一个参数
+  unit_title=decodeURI(courseId);//转码将解码方式unscape换为decodeURI，将中文参数获取
+  name.innerHTML = unit_title
+</script>
+<script type="text/javascript" src="js/index.js"></script>
+</body>
+</html>
